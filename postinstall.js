@@ -1,7 +1,8 @@
 const semver = require('semver');
 const colors = require('colors/safe');
 
-const { engines: { node: nodeVersion }} = require('./package');
+// eslint-disable-next-line import/extensions
+const { engines: { node: nodeVersion } } = require('./package');
 
 if (!semver.satisfies(process.version, nodeVersion)) {
   process.emitWarning(
